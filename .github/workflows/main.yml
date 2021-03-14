@@ -20,7 +20,7 @@ jobs:
 
       - name: Push image
         run: |
-          IMAGE_ID=${{ secrets.DOCKER_REGISTRY_URL }}
+          IMAGE_ID="dmchamps/flask-test"
     
           [ "$VERSION" == "master" ] && VERSION=latest
           echo IMAGE_ID=$IMAGE_ID
