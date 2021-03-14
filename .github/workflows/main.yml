@@ -22,7 +22,7 @@ jobs:
         run: |
           IMAGE_ID="dmchamps/flask-test"
     
-          [ "$VERSION" == "master" ] && VERSION=latest
+          VERSION=latest
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
 
