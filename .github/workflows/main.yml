@@ -17,7 +17,8 @@ jobs:
         run: docker build --file ./test/Dockerfile.txt --tag image .
         
       - name: Login into Docker
-        run: docker login --username=dmchamps -p=dmchampsjr@123
+        run:
+           docker login --username=${{ secrets.DOCKER_USERNAME }} -p=${{ secrets.DOCKER_PASSWORD }}
 
        
 
