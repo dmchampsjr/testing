@@ -15,6 +15,9 @@ jobs:
 
       - name: Build docker image
         run: docker build --file ./test/Dockerfile.txt --tag image .
+        
+      - name: Login into Docker
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login ${{ secrets.DOCKER_REGISTRY_URL }} -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
 
        
 
