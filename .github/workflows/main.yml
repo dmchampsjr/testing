@@ -17,7 +17,7 @@ jobs:
         run: docker build --file ./test/Dockerfile.txt --tag image .
         
       - name: Login into Docker
-        run: docker login -u dmchamps 
+        run: docker login --username=dmchamps --email=dmchampsjr@gmail.com 
 
        
 
