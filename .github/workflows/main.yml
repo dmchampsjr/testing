@@ -16,7 +16,6 @@ jobs:
       - name: Build docker image
         run: docker build --file ./test/Dockerfile.txt --tag image .
 
-      - name: Log into registry
        
 
       - name: Push image
